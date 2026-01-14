@@ -106,9 +106,10 @@
                     <div class="buttonContainer">
 
                         <button class="btn_retro" onclick="PreguntasDOM('retroceder')">Retroceder</button>
-                        <button class="btn_next" onclick="PreguntasDOM('avanzar')">Paso Siguiente</button>
-                        <button class="btn_imprimir" onclick="imprimir()">🖨 Imprimir Contrato</button>
+                        <button id="nextButton" class="btn_next" onclick="PreguntasDOM('avanzar')">Paso Siguiente</button>
                     </div>
+                     <button style="display:block; font-weight: bolder; color:white; background:rgb(31, 101, 72); width:100%; border-radius: 50px; border-color:transparent; margin-top:20px; height:40px;" id="printButton" class="btn_next" onclick="imprimir()">🖨 Imprimir</button>
+
                 </div>
             </div>
 

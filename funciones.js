@@ -38,13 +38,15 @@ document.getElementById('elemento1').style.display = 'block';
 function PreguntasDOM(evento) {
 
     const elementos = ['elemento1', 'elemento2', 'elemento3'];
-
+    
     if (evento === 'avanzar' && AutoIncrementador < titulosSeccion.length - 1) {
+
         AutoIncrementador++;
         document.getElementById('titulo').innerHTML = titulosSeccion[AutoIncrementador];
 
         document.getElementById(elementos[AutoIncrementador]).style.display = 'block';
         document.getElementById(elementos[(AutoIncrementador - 1)]).style.display = 'none';
+    
 
     } else {
         AutoIncrementador--;

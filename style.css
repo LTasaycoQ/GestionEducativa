@@ -281,6 +281,26 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
+    .containerFormulario {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .SeccionContainerformulario {
+        width: 80%;
+
+    }
+
+
+
+    .hojaRellenado {
+        width: 100%;
+    }
+
     .navbar-menu {
         position: absolute;
         top: 70px;
@@ -300,6 +320,8 @@ h2 {
     .navbar-toggle {
         display: flex;
     }
+
+
 }
 
 
@@ -332,7 +354,6 @@ h2 {
 
 
 
-/* ===================== IMPRESIÓN ===================== */
 @media print {
     body {
         margin: 0;
@@ -341,12 +362,12 @@ h2 {
         color: #000;
     }
 
-    /* Ocultar elementos innecesarios */
-    nav, aside .buttonContainer, .barra_progress {
+    nav,
+    aside .buttonContainer,
+    .barra_progress {
         display: none !important;
     }
 
-    /* Mostrar solo el contenido del contrato */
     .hojaRellenado {
         width: 100%;
         padding: 0;
@@ -358,7 +379,6 @@ h2 {
         padding: 0;
     }
 
-    /* Ajustar márgenes */
     @page {
         margin: 2cm;
     }
