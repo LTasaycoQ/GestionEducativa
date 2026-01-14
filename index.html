@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+            <h1>Generador de Contratos</h1>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+            <li><a href="#contrato">Contrato</a></li>
+            <li><a href="#ayuda">Ayuda</a></li>
+        </ul>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+
+    <aside class="contenido">
+        <div class="container-titulo" id="containerTitullo">
+            <h2>Contrato de arrendamiento de vivienda Habitual</h2>
+
+            <div class="barra_progress">
+                <div class="barra_progress_inner" id="barra"></div>
+            </div>
+
+        </div>
+
+
+        <div class="containerFormulario">
+            <div class="SeccionContainerformulario" id="formularioRegistrar">
+                <div class="ContainerformularioCampos">
+                    <p class="PreguntaFormulario" id="titulo"></p>
+
+                    <div id="elemento1" style="display: none;">
+
+                        <div class="tituloSeccionDatos">
+                            <p class="fechaStyle"> Datos del Arrendador</p>
+
+                            <svg id="questionArrendador" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-question-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14" />
+                            </svg>
+                        </div>
+
+                        <div id="questionModalArrendador"
+                            style="position: absolute; z-index: 10; width: 400px; margin-left:32em; margin-top: -32px; display: none;  background-color: rgb(246, 246, 246);border: rgb(72, 233, 201) 3px solid; padding: 10px; border-radius: 10px;">
+                            Identifica a la persona propietaria del inmueble y establece quién cede el uso de la
+                            vivienda.
+                        </div>
+
+
+
+
+                        <input type="text" id="inputArrendador" placeholder="Nombre del arrendador">
+                        <input type="text" id="inputDniArrendador" placeholder="DNI arrendador">
+                        <div class="tituloSeccionDatos">
+                            <p class="fechaStyle"> Datos del Arrendatario</p>
+                            <svg id="questionArrendatario" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-question-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14" />
+                            </svg>
+                        </div>
+
+                        <div id="questionModalArrendatario"
+                            style="position: absolute; z-index: 10; width: 400px; margin-left:32em; margin-top: -32px; display: none;  background-color: rgb(246, 246, 246);border: rgb(72, 233, 201) 3px solid; padding: 10px; border-radius: 10px;">
+                            Define a la persona que recibe el inmueble en alquiler y asume las obligaciones del
+                            contrato.
+                        </div>
+
+
+                        <input type="text" id="inputArrendatario" placeholder="Nombre del arrendatario">
+
+                        <input type="text" id="inputDniArrendatario" placeholder="DNI arrendatario">
+                        <input type="text" id="inputDireccion" placeholder="Dirección del inmueble">
+                    </div>
+                    <div id="elemento2" style="display: none;">
+                        <input type="number" id="inputDuracion" placeholder="Duración en meses">
+                        <input type="number" id="inputMonto" placeholder="Monto mensual">
+
+                    </div>
+                    <div id="elemento3" class="" style="display: none;">
+                        <p class="fechaStyle"> Fecha de Inicio</p>
+
+                        <input type="date" id="inputFecha" placeholder="Fecha inicio">
+
+                        <p class="fechaStyle">Fecha de Fin</p>
+                        <input type="date" id="inputFechaFin" placeholder="Fecha fin">
+
+                    </div>
+                    <div class="buttonContainer">
+
+                        <button class="btn_retro" onclick="PreguntasDOM('retroceder')">Retroceder</button>
+                        <button class="btn_next" onclick="PreguntasDOM('avanzar')">Paso Siguiente</button>
+                        <button class="btn_imprimir" onclick="imprimir()">🖨 Imprimir Contrato</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="position: relative;" id="hojaRellenado" class="hojaRellenado">
+                <div class="contenidoContrato" id="contenidoHoja">
+                    <div class="contentScroll" id="contratoStyle">
+
+                        <h3>CONTRATO DE ARRENDAMIENTO DE VIVIENDA</h3>
+
+                        <div class="fechaContrato">
+                            Lima, Perú, a <span id="fechaHoy"> </span>.
+                        </div>
+
+                        <p class="parrafo1">
+                            Entre <span id="arrendadorName" class="arrendador">_____</span>, identificado con DNI N°
+                            <span class="dniArrendador">_____</span>, en adelante denominado “El Arrendador”, y <span
+                                class="arrendatario">_____</span>, identificado con DNI N°
+                            <span class="dniArrendatario">_____</span>, en adelante denominado “El Arrendatario”, se
+                            celebra el
+                            presente contrato bajo las siguientes cláusulas:
+                        </p>
+
+                        <p class="parrafo2">
+                            <span class="seccion1">PRIMERA:</span> OBJETO
+                            El Arrendador da en arrendamiento al Arrendatario el inmueble ubicado en <span
+                                class="direccion">_____</span>, con destino exclusivamente habitacional.
+
+                        </p>
+
+                        <p class="parrafo2">
+
+                            <span class="seccion1">SEGUNDA:</span> DURACIÓN
+                            El plazo del presente contrato será de <span class="duracion">_____</span> meses, iniciando
+                            el
+                            día
+                            <span class="fecha">_____</span> y finalizando el <span class="fechaFin">_____</span>.
+                        </p>
+
+                        <p class="parrafo2">
+                            <span class="seccion1">TERCERA:</span> RENTA
+                            El Arrendatario se obliga a pagar al Arrendador la suma de S/. <span
+                                class="monto">_____</span>
+                            mensuales, pagaderos por adelantado el primer día de cada mes.
+
+                        </p>
+                        <br>
+                        <h4>CUARTA: OBLIGACIONES DEL ARRENDATARIO</h4>
+
+                        <div class="listaObligaciones">
+                            <ul>
+                                <li>Conservar la vivienda en buen estado.</li>
+                                <li>Pagar puntualmente la renta.</li>
+                                <li>Cumplir las normas de convivencia.</li>
+                            </ul>
+                        </div>
+
+                        <h4> QUINTA: OBLIGACIONES DEL ARRENDADOR</h4>
+
+                        <div class="listaObligaciones">
+                            <ul>
+                                <li>Entregar la vivienda en condiciones habitables.</li>
+                                <li>Respetar la privacidad del Arrendatario.</li>
+                            </ul>
+                        </div>
+                        <h4>SEXTA: TERMINACIÓN</h4>
+                        <p>
+                            El incumplimiento de cualquiera de las obligaciones podrá dar lugar a la resolución del
+                            contrato.
+                        </p>
+
+                        <br>
+
+                        <div class="containerFirmas">
+
+                            <div class="firmaContainer">
+                                <p>EL ARRENDADOR</p>
+                                <span id="contenidoNombreArrendador">_____</span>
+                            </div>
+
+
+                            <div class="firmaContainer">
+                                <p>EL ARRENDATARIO</p>
+                                <span id="contenidoNombreArrendatario">_____</span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+
+
+
+
+
+    <script src="funciones.js">
+    </script>
+    <script src="barraPorcentaje.js">
+    </script>
+</body>
+
+</html>
